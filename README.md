@@ -76,6 +76,10 @@ update-locale en_US.UTF-8
 Either comment out `SendEnv LANG LC_*` in `/etc/ssh/ssh_config` on your PC,
 or comment out `AcceptEnv LANG LC_*` in the same file on Raspberry Pi. 
 
+### How to install certain Software?
+
+See [software.md](software.md) for instructions on how to install Grafana, Prometheus, Airflow etc.
+
 ### Useful Links
 
 * https://www.raspberrypi.org/software/operating-systems/
