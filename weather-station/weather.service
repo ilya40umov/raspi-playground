@@ -1,0 +1,13 @@
+[Unit]
+Description=Weather Server
+
+[Service]
+Type=simple
+User=weather
+Group=weather
+Restart=on-failure
+ExecStart=/opt/weather/weather_station.py
+
+[Install]
+WantedBy=multi-user.target
+

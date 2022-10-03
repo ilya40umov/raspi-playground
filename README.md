@@ -1,9 +1,12 @@
-# raspi-howtos
-A list of HOWTOs around setting up a Raspberry Pi
+# raspi-playground
+
+## Raspberry Pi - HOWTOs
 
 Note, that a lot of things mentioned here can be also done via `sudo raspi-config` (an interactive shell tool for configuring a raspberry pi):
 
 ### How to prepare an SD-card?
+
+**Update**: Since recently "Imager" tool is capable of doing a lot of these things (like creating a new user, setting WIFI and enabling SSH access). See [this](https://www.raspberrypi.com/news/raspberry-pi-bullseye-update-april-2022/).
 
 1. Download and unzip the latest OS image (can be found [here](https://www.raspberrypi.org/software/operating-systems/))
 1. Insert the SD-card and unmount the auto-mounted partition (e.g. `umount /dev/sdb1`)
