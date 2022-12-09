@@ -25,7 +25,7 @@ def main():
         time.sleep(0.001)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     try:
         main()
     finally:
