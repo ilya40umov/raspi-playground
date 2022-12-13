@@ -40,4 +40,5 @@ if __name__ == "__main__":
         loop()
     except KeyboardInterrupt:
         print("Stopped after a keyboard interrupt...")
+    finally:
         destroy()
