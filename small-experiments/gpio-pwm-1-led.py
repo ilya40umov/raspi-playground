@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 
 pwm_pin = 18
-pwm_freq = 500 # 500 Hz
+pwm_freq = 500  # 500 Hz
 
 
 def init():
@@ -13,7 +13,7 @@ def init():
     GPIO.output(pwm_pin, GPIO.LOW)
 
     pwm = GPIO.PWM(pwm_pin, pwm_freq)
-    pwm.start(0) # initial duty cycle - 0%
+    pwm.start(0)  # initial duty cycle - 0%
 
 
 def loop():
@@ -30,6 +30,7 @@ def loop():
 
 
 def destroy():
+    pwm.stop()
     GPIO.cleanup()
 
 
