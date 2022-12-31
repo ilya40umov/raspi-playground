@@ -3,7 +3,7 @@ import time
 import random
 
 pwm_pin_r = 17
-pwm_pin_g = 27 
+pwm_pin_g = 27
 pwm_pin_b = 4
 pwm_pins = [pwm_pin_r, pwm_pin_g, pwm_pin_b]
 pwm_freq = 2000  # 2000 Hz
@@ -28,13 +28,13 @@ def loop():
     (ro, go, bo) = (0, 0, 0)
     while True:
         (r, g, b) = (random.randint(0, 1) for _ in range(0, 3))
-        
+
         if r == ro and g == go and b == bo:
             continue
 
         if not r and not g and not b:
             continue
-       
+
         print(f"r={r}, g={g}, b={b}")
 
         for i in range(100, -1, -1):
