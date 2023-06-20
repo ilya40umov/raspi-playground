@@ -6,9 +6,9 @@ from prometheus_client import start_http_server, Gauge
 
 sense = SenseHat()
 
-gauge_temperature = Gauge('home_weather_temperature', 'Temperature in C')
-gauge_humidity = Gauge('home_weather_humidity', 'Humidity in %rH')
-gauge_pressure = Gauge('home_weather_pressure', 'Pressure in Millibars')
+gauge_temperature = Gauge("home_weather_temperature", "Temperature in C")
+gauge_humidity = Gauge("home_weather_humidity", "Humidity in %rH")
+gauge_pressure = Gauge("home_weather_pressure", "Pressure in Millibars")
 
 print("=== Started ===")
 
@@ -18,7 +18,9 @@ try:
     while True:
         temp_from_humidity = float(sense.get_temperature_from_humidity())
         temp_from_pressure = float(sense.get_temperature_from_pressure())
-        temp_correction_factor = (temp_from_humidity - temp_from_pressure) / temp_from_pressure
+        temp_correction_factor = (
+            temp_from_humidity - temp_from_pressure
+        ) / temp_from_pressure
         humidity = float(sense.get_humidity())
         corrected_humidity = humidity * (1 - temp_correction_factor)
         gauge_temperature.set(round(temp_from_pressure, 2))
